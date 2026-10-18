@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Majestic Start-Up | Business Registration & Compliance in Mahikeng</title>
+<meta name="description" content="Expert business management consultancy in Mahikeng. We handle Company Registration, CSD, Tax Clearance, COIDA, and Business Plans. 4.9 Star rated." />
+<meta name="theme-color" content="#0a0a0a" />
+
+<style>
+  :root{
+    --ink:#111827;
+    --black:#0a0a0a;       /* Logo Black */
+    --black-light:#1f2937;
+    --teal:#00d2b4;        /* Logo Teal */
+    --teal-dark:#00a892;   /* Darker Teal for hovers */
+    --paper:#f4f7f6;       /* Slight tint of teal in the off-white */
+    --white:#ffffff;
+    --muted:#64748b;
+    --line:#e2e8f0;
+    --radius:16px;
+    --shadow:0 12px 34px rgba(0,0,0,.08);
+    --shadow-sm:0 4px 14px rgba(0,0,0,.04);
+    --max:1120px;
+  }
+
+  *,*::before,*::after{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    margin:0;
+    font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;
+    color:var(--ink);
+    background:var(--white);
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  img{max-width:100%;display:block}
+  a{color:inherit;text-decoration:none}
+  h1,h2,h3,h4{margin:0;line-height:1.15;letter-spacing:-.02em;font-weight:800}
+  p{margin:0}
+  ul{margin:0;padding:0;list-style:none}
+
+  .wrap{width:100%;max-width:var(--max);margin-inline:auto;padding-inline:20px}
+  .section{padding:76px 0;scroll-margin-top:84px}
+  .section--tint{background:var(--paper)}
+
+  /* ---------- Buttons ---------- */
+  .btn{
+    display:inline-flex;align-items:center;justify-content:center;gap:9px;
+    padding:14px 22px;border-radius:8px;font-weight:700;font-size:.95rem;
+    border:2px solid transparent;cursor:pointer;transition:.2s ease;
+    font-family:inherit;line-height:1;white-space:nowrap;
+  }
+  .btn svg{width:18px;height:18px;flex:none}
+  .btn--primary{background:var(--teal);color:var(--black)}
+  .btn--primary:hover{background:var(--teal-dark);transform:translateY(-2px);box-shadow:0 10px 22px rgba(0,210,180,.3)}
+  .btn--ghost{background:transparent;color:#fff;border-color:rgba(255,255,255,.35)}
+  .btn--ghost:hover{background:rgba(255,255,255,.1);border-color:rgba(255,255,255,.6);transform:translateY(-2px)}
+  .btn--outline{background:#fff;color:var(--black);border-color:var(--line)}
+  .btn--outline:hover{border-color:var(--teal);color:var(--teal-dark);transform:translateY(-2px)}
+
+  /* ---------- Header ---------- */
+  .header{
+    position:sticky;top:0;z-index:60;
+    background:rgba(255,255,255,.95);
+    backdrop-filter:blur(12px);
+    border-bottom:1px solid transparent;
+    transition:border-color .25s, box-shadow .25s;
+  }
+  .header.is-stuck{border-bottom-color:var(--line);box-shadow:0 6px 20px rgba(0,0,0,.06)}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:76px;gap:16px}
+  .brand{display:flex;align-items:center;gap:12px;font-weight:800;letter-spacing:-.02em}
+  
+  /* Logo Image Styling */
+  .brand__logo{
+    height:48px;width:auto;object-fit:contain;
+  }
+  
+  .brand__text{display:flex;flex-direction:column;line-height:1.1}
+  .brand__name{font-size:1.1rem;text-transform:uppercase;letter-spacing:.05em;color:var(--black);}
+  .brand__sub{font-size:.68rem;font-weight:700;color:var(--teal-dark);letter-spacing:.09em;text-transform:uppercase}
+
+  .nav__links{display:none;align-items:center;gap:26px;font-size:.92rem;font-weight:600}
+  .nav__links a{color:#334155;transition:color .18s}
+  .nav__links a:hover{color:var(--teal-dark)}
+  .nav__actions{display:flex;align-items:center;gap:10px}
+  .nav__phone{display:none}
+  .nav .btn{padding:11px 18px;font-size:.85rem;border-radius:6px;}
+
+  .burger{
+    display:grid;place-items:center;width:44px;height:44px;border-radius:8px;
+    border:1px solid var(--line);background:#fff;cursor:pointer;
+  }
+  .burger span{display:block;width:18px;height:2px;background:var(--ink);border-radius:2px;position:relative;transition:.2s}
+  .burger span::before,.burger span::after{
+    content:'';position:absolute;left:0;width:18px;height:2px;background:var(--ink);border-radius:2px;transition:.2s;
+  }
+  .burger span::before{top:-6px}
+  .burger span::after{top:6px}
+  .burger[aria-expanded="true"] span{background:transparent}
+  .burger[aria-expanded="true"] span::before{top:0;transform:rotate(45deg)}
+  .burger[aria-expanded="true"] span::after{top:0;transform:rotate(-45deg)}
+
+  .mobile-menu{
+    display:none;border-top:1px solid var(--line);background:#fff;
+    padding:12px 20px 22px;
+  }
+  .mobile-menu.is-open{display:block;animation:slideDown .22s ease}
+  @keyframes slideDown{from{opacity:0;transform:translateY(-6px)}to{opacity:1;transform:none}}
+  .mobile-menu a{
+    display:block;padding:13px 4px;font-weight:600;color:#334155;
+    border-bottom:1px solid var(--line);
+  }
+  .mobile-menu a:last-of-type{border-bottom:0}
+  .mobile-menu .btn{width:100%;margin-top:14px}
+
+  /* ---------- Hero ---------- */
+  .hero{
+    position:relative;overflow:hidden;color:#fff;
+    background: linear-gradient(160deg,#000000,#0a0a0a);
+    padding:64px 0 84px;
+  }
+  .hero::before{
+    content:'';position:absolute;inset:0;pointer-events:none;
+    background-image: linear-gradient(rgba(0,210,180,.05) 1px, transparent 1px), linear-gradient(90deg, rgba(0,210,180,.05) 1px, transparent 1px);
+    background-size:40px 40px;
+  }
+  .hero .wrap{position:relative;z-index:1}
+  .hero__grid{display:grid;gap:44px;align-items:center}
+
+  .eyebrow{
+    display:inline-flex;align-items:center;gap:8px;
+    font-size:.74rem;font-weight:800;letter-spacing:.13em;text-transform:uppercase;
+    color:var(--teal);background:rgba(0,210,180,.1);
+    border:1px solid rgba(0,210,180,.3);
+    padding:8px 14px;border-radius:999px;
+  }
+  .hero h1{font-size:clamp(2.1rem,6vw,3.5rem);margin:20px 0 16px;letter-spacing:-.03em}
+  .hero h1 em{font-style:normal;color:var(--teal)}
+  .hero__lead{font-size:clamp(1rem,2.4vw,1.14rem);color:#cbd5e1;max-width:34rem}
+  .hero__cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
+
+  .hero__trust{display:flex;flex-wrap:wrap;gap:10px 22px;margin-top:28px;font-size:.86rem;color:#94a3b8}
+  .hero__trust span{display:inline-flex;align-items:center;gap:7px}
+  .hero__trust svg{width:16px;height:16px;color:var(--teal);flex:none}
+
+  /* Hero card */
+  .hero-card{
+    background:rgba(255,255,255,.05);
+    border:1px solid rgba(255,255,255,.1);
+    backdrop-filter:blur(10px);
+    border-radius:16px;padding:30px;box-shadow:0 24px 60px rgba(0,0,0,.3);
+  }
+  .hero-card__rating{display:flex;align-items:center;gap:14px;margin-bottom:20px;}
+  .score{font-size:2.6rem;font-weight:900;letter-spacing:-.03em;line-height:1}
+  .stars{color:var(--teal);letter-spacing:2px;font-size:1rem}
+  .hero-card__meta{font-size:.82rem;color:#94a3b8;margin-top:4px}
+  .hero-card__divider{height:1px;background:rgba(255,255,255,.1);margin:20px 0}
+  .hero-card h3{font-size:1.1rem;margin-bottom:12px;color:var(--teal);}
+  .hero-card__list li{display:flex;gap:10px;font-size:.9rem;color:#cbd5e1;margin-bottom:8px;}
+  .hero-card__list li::before{content:'✓';color:var(--teal);font-weight:900;}
+  .hero-card .btn{width:100%;margin-top:20px;}
+
+  /* ---------- Section heads ---------- */
+  .head{max-width:640px;margin-bottom:44px}
+  .head--center{margin-inline:auto;text-align:center}
+  .kicker{
+    font-size:.74rem;font-weight:800;letter-spacing:.14em;text-transform:uppercase;
+    color:var(--teal-dark);margin-bottom:12px;
+  }
+  .head h2{font-size:clamp(1.65rem,4vw,2.35rem)}
+  .head p{color:var(--muted);margin-top:14px;font-size:1.02rem}
+
+  /* ---------- Services ---------- */
+  .services-grid{display:grid;grid-template-columns:1fr;gap:24px;}
+  .service-category{
+    background:#fff;border:1px solid var(--line);border-radius:12px;padding:30px;box-shadow:var(--shadow-sm);
+  }
+  .service-category h3{
+    font-size:1.2rem;margin-bottom:20px;padding-bottom:12px;border-bottom:2px solid var(--paper);
+    display:flex;align-items:center;gap:10px;color:var(--black);
+  }
+  .service-category h3 svg{color:var(--teal);width:24px;height:24px;}
+  .service-list{display:grid;gap:12px;}
+  .service-list li{
+    display:flex;align-items:flex-start;gap:10px;font-size:.95rem;color:#334155;font-weight:500;
+  }
+  .service-list li::before{
+    content:'✓';color:var(--teal);font-weight:900;font-size:1rem;
+  }
+
+  /* ---------- Stats Strip ---------- */
+  .stats-strip{background:var(--black);color:#fff;padding:40px 0; border-top:1px solid rgba(0,210,180,.2); border-bottom:1px solid rgba(0,210,180,.2);}
+  .stats-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px;text-align:center;}
+  .stat-item strong{display:block;font-size:2rem;color:var(--teal);font-weight:900;}
+  .stat-item span{font-size:.85rem;color:#cbd5e1;text-transform:uppercase;letter-spacing:.05em;}
+
+  /* ---------- Reviews ---------- */
+  .reviews-grid{display:grid;grid-template-columns:1fr;gap:20px;}
+  .review-card{
+    background:#fff;border:1px solid var(--line);border-radius:12px;padding:24px;
+  }
+  .review-stars{color:var(--teal);font-size:1.1rem;margin-bottom:12px;}
+  .review-text{font-style:italic;color:#334155;margin-bottom:16px;font-size:.95rem;}
+  .review-author{display:flex;align-items:center;gap:10px;}
+  .review-avatar{width:36px;height:36px;border-radius:50%;background:var(--black);color:#fff;display:grid;place-items:center;font-weight:700;font-size:.8rem;}
+  .review-name{font-weight:700;font-size:.9rem;}
+  .review-meta{font-size:.75rem;color:var(--muted);}
+
+  /* ---------- Contact form ---------- */
+  .contact-grid{display:grid;gap:30px;align-items:start}
+  .form-panel{background:#fff;border:1px solid var(--line);border-radius:16px;padding:30px;box-shadow:var(--shadow)}
+  .field{margin-bottom:16px}
+  .field label{display:block;font-size:.8rem;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:#334155;margin-bottom:7px}
+  .field input,.field textarea,.field select{
+    width:100%;padding:13px 15px;border:1.5px solid var(--line);border-radius:8px;
+    font-family:inherit;font-size:.95rem;color:var(--ink);background:#fcfdff;
+    transition:border-color .18s, box-shadow .18s;
+  }
+  .field select{appearance:none;background-image:url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23334155%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E");background-repeat:no-repeat;background-position:right 15px top 50%;background-size:12px auto}
+  .field input:focus,.field textarea:focus,.field select:focus{
+    outline:none;border-color:var(--teal);background:#fff;
+    box-shadow:0 0 0 3px rgba(0,210,180,.15);
+  }
+  .field--row{display:grid;gap:16px}
+  .form-panel .btn{width:100%}
+
+  .cta-side{
+    background:var(--paper);
+    border: 1px solid var(--line);
+    border-radius:16px;padding:34px;
+  }
+  .cta-side h3{font-size:1.4rem;margin-bottom:12px;color:var(--black);}
+  .cta-side p{color:var(--muted);font-size:.95rem;margin-bottom:22px}
+  .cta-side .btn{width:100%;margin-bottom:10px}
+  .contact-detail{display:flex;gap:12px;margin-bottom:16px;align-items:flex-start;}
+  .contact-detail svg{color:var(--teal);flex:none;width:20px;height:20px;}
+  .contact-detail div{font-size:.95rem;color:#334155;}
+
+  /* ---------- Footer ---------- */
+  .footer{background:var(--black);color:#94a3b8;padding:48px 0 28px;font-size:.88rem}
+  .footer__grid{display:grid;gap:28px;margin-bottom:32px}
+  .footer .brand__name{color:#fff}
+  .footer .brand__sub{color:var(--teal)}
+  .footer p{margin-top:14px;max-width:24rem;line-height:1.7}
+  .footer h4{color:#fff;font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;margin-bottom:14px}
+  .footer li{margin-bottom:9px}
+  .footer a:hover{color:var(--teal)}
+  .footer__bottom{
+    border-top:1px solid rgba(255,255,255,.1);padding-top:22px;
+    display:flex;flex-wrap:wrap;gap:10px;justify-content:space-between;font-size:.8rem;color:#64748b;
+  }
+
+  /* ---------- Floating WhatsApp ---------- */
+  .fab{
+    position:fixed;right:18px;bottom:18px;z-index:70;
+    width:58px;height:58px;border-radius:50%;display:grid;place-items:center;
+    background:#25d366;color:#fff;box-shadow:0 12px 28px rgba(37,211,102,.45);
+    transition:transform .2s ease, box-shadow .2s ease;
+  }
+  .fab:hover{transform:scale(1.08);box-shadow:0 16px 34px rgba(37,211,102,.55)}
+  .fab svg{width:29px;height:29px}
+
+  /* ---------- Reveal ---------- */
+  .reveal{opacity:0;transform:translateY(22px);transition:opacity .6s ease, transform .6s ease}
+  .reveal.is-visible{opacity:1;transform:none}
+  @media (prefers-reduced-motion:reduce){
+    *{animation:none!important;transition:none!important}
+    .reveal{opacity:1;transform:none}
+    html{scroll-behavior:auto}
+  }
+
+  /* ---------- Breakpoints ---------- */
+  @media (min-width:640px){
+    .field--row{grid-template-columns:1fr 1fr}
+    .hero__cta .btn{min-width:190px}
+    .services-grid{grid-template-columns:repeat(2,1fr);}
+    .stats-grid{grid-template-columns:repeat(4,1fr);}
+    .reviews-grid{grid-template-columns:repeat(2,1fr);}
+  }
+  @media (min-width:900px){
+    .section{padding:96px 0}
+    .hero{padding:92px 0 108px}
+    .hero__grid{grid-template-columns:1.1fr .9fr;gap:56px}
+    .contact-grid{grid-template-columns:.95fr 1.05fr;gap:34px}
+    .footer__grid{grid-template-columns:1.6fr 1fr 1fr}
+    .nav__links{display:flex}
+    .burger{display:none}
+    .nav__phone{display:inline-flex}
+    .services-grid{grid-template-columns:repeat(3,1fr);}
+    .reviews-grid{grid-template-columns:repeat(3,1fr);}
+  }
+  @media (min-width:1100px){
+    .fab{right:28px;bottom:28px}
+  }
+</style>
+</head>
+<body>
+
+<!-- ================= HEADER ================= -->
+<header class="header" id="header">
+  <div class="wrap">
+    <nav class="nav" aria-label="Main navigation">
+      <a href="#top" class="brand" aria-label="Majestic Start-Up home">
+        <!-- Replace logo.png with the actual file name you upload -->
+        <img src="logo.png" alt="Majestic Start-Up Logo" class="brand__logo">
+        <span class="brand__text">
+          <span class="brand__name">Majestic Start-Up</span>
+          <span class="brand__sub">Business Consultancy</span>
+        </span>
+      </a>
+
+      <div class="nav__links">
+        <a href="#services">Services</a>
+        <a href="#reviews">Reviews</a>
+        <a href="#contact">Get a Quote</a>
+      </div>
+
+      <div class="nav__actions">
+        <a class="btn btn--outline nav__phone" href="tel:+27766712932">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2Z"/></svg>
+          076 671 2932
+        </a>
+        <a class="btn btn--primary" href="#contact">Consultation</a>
+        <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
+          <span></span>
+        </button>
+      </div>
+    </nav>
+  </div>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#services">Services</a>
+    <a href="#reviews">Reviews</a>
+    <a href="#contact">Get a Quote</a>
+    <a class="btn btn--primary" href="tel:+27766712932">Call 076 671 2932</a>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- ================= HERO ================= -->
+  <section class="hero">
+    <div class="wrap">
+      <div class="hero__grid">
+        <div>
+          <span class="eyebrow"><span class="dot" style="background:var(--teal)"></span>4.9 Star Rated Consultancy</span>
+          <h1>Register. Comply. <em>Grow Your Business.</em></h1>
+          <p class="hero__lead">
+            Navigating CIPC, SARS, and compliance can be overwhelming. Let Majestic Start-Up handle the paperwork so you can focus on building your empire. 100% remote service available.
+          </p>
+          <div class="hero__cta">
+            <a class="btn btn--primary" href="#contact">Request a Quote</a>
+            <a class="btn btn--ghost" href="#services">View All Services</a>
+          </div>
+          <div class="hero__trust">
+            <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Fast Turnaround</span>
+            <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>100% Remote Service</span>
+            <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Trusted Experts</span>
+          </div>
+        </div>
+
+        <aside class="hero-card" aria-label="Business summary">
+          <div class="hero-card__rating">
+            <div class="score">4.9</div>
+            <div>
+              <div class="stars" aria-hidden="true">★★★★★</div>
+              <div class="hero-card__meta">Based on 14 Google Reviews</div>
+            </div>
+          </div>
+          <div class="hero-card__divider"></div>
+          <h3>Why clients trust us:</h3>
+          <ul class="hero-card__list">
+            <li>Company profiles delivered in under 2 days.</li>
+            <li>CIPC &amp; Ownership transfers handled efficiently.</li>
+            <li>Consultation via phone or WhatsApp.</li>
+          </ul>
+          <a class="btn btn--primary" href="#contact">Start Your Business</a>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= STATS STRIP ================= -->
+  <div class="stats-strip">
+    <div class="wrap">
+      <div class="stats-grid">
+        <div class="stat-item"><strong>4.9★</strong><span>Google Rated</span></div>
+        <div class="stat-item"><strong>100%</strong><span>Remote Service</span></div>
+        <div class="stat-item"><strong>2-3 Days</strong><span>Avg. Turnaround</span></div>
+        <div class="stat-item"><strong>14+</strong><span>Happy Reviews</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= SERVICES ================= -->
+  <section class="section" id="services">
+    <div class="wrap">
+      <div class="head head--center reveal">
+        <p class="kicker">Our Expertise</p>
+        <h2>Complete Business Solutions</h2>
+        <p>From the initial registration to ongoing compliance, we handle everything your business needs to operate legally in South Africa.</p>
+      </div>
+
+      <div class="services-grid">
+        
+        <!-- Category 1: Registrations -->
+        <article class="service-category reveal">
+          <h3>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+            Company &amp; Entity Setup
+          </h3>
+          <ul class="service-list">
+            <li>Company Registration (Pty Ltd)</li>
+            <li>Non-Profit Company (NPC)</li>
+            <li>Church Registration</li>
+            <li>Company Re-instatement</li>
+            <li>Beneficial Ownership Filing</li>
+          </ul>
+        </article>
+
+        <!-- Category 2: Compliance -->
+        <article class="service-category reveal">
+          <h3>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            Tax &amp; Compliance
+          </h3>
+          <ul class="service-list">
+            <li>CSD Registration (Central Supplier Database)</li>
+            <li>Tax Clearance Certificate</li>
+            <li>COIDA Registration</li>
+            <li>B-BBEE Affidavits</li>
+            <li>Annual Returns</li>
+          </ul>
+        </article>
+
+        <!-- Category 3: Growth & Branding -->
+        <article class="service-category reveal">
+          <h3>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"/><path d="M12 22V12"/><path d="m3.3 7 8.7 5 8.7-5"/></svg>
+            Branding &amp; Strategy
+          </h3>
+          <ul class="service-list">
+            <li>Professional Logo Design</li>
+            <li>Company Letterheads</li>
+            <li>Business Plan Writing</li>
+            <li>Business Coaching</li>
+            <li>Business Development Service</li>
+          </ul>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= REVIEWS ================= -->
+  <section class="section section--tint" id="reviews">
+    <div class="wrap">
+      <div class="head head--center reveal">
+        <p class="kicker">Client Success</p>
+        <h2>Don't just take our word for it</h2>
+      </div>
+
+      <div class="reviews-grid">
+        <div class="review-card reveal">
+          <div class="review-stars">★★★★★</div>
+          <p class="review-text">"100% recommend their services. I was struggling for almost 4-5 years to change ownership of my late father's company with CIPC, but Majestic Start-Up helped me with everything in just 2-3 weeks."</p>
+          <div class="review-author">
+            <div class="review-avatar">TC</div>
+            <div>
+              <div class="review-name">Tlhalefang Chelechele</div>
+              <div class="review-meta">Google Review</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="review-card reveal">
+          <div class="review-stars">★★★★★</div>
+          <p class="review-text">"I have received my profile in less than 2 days. I recommend this company to everyone. I'm so happy, thanks to Majestic Start-Up."</p>
+          <div class="review-author">
+            <div class="review-avatar">OK</div>
+            <div>
+              <div class="review-name">Omphemetse Kenosi</div>
+              <div class="review-meta">Google Review</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="review-card reveal">
+          <div class="review-stars">★★★★★</div>
+          <p class="review-text">"Good customer service and trustworthy. I didn't even have to go to their premises, they helped me over the phone."</p>
+          <div class="review-author">
+            <div class="review-avatar">TM</div>
+            <div>
+              <div class="review-name">Thabang Motlhaga</div>
+              <div class="review-meta">Google Review</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= CONTACT / QUOTE ================= -->
+  <section class="section" id="contact">
+    <div class="wrap">
+      <div class="head head--center reveal">
+        <p class="kicker">Get Started</p>
+        <h2>Request a Service</h2>
+        <p>Fill in the details below and we'll open WhatsApp so you can get an instant quote from our team.</p>
+      </div>
+
+      <div class="contact-grid">
+        <form class="form-panel reveal" id="bookingForm">
+          <div class="field">
+            <label for="name">Full Name</label>
+            <input id="name" name="name" type="text" placeholder="e.g. Thabo Mokoena" required>
+          </div>
+
+          <div class="field">
+            <label for="serviceType">Service Required</label>
+            <select id="serviceType" name="serviceType" required>
+              <option value="">-- Select a Service --</option>
+              <optgroup label="Registrations">
+                <option value="Company Registration">Company Registration (Pty Ltd)</option>
+                <option value="NPC Registration">Non-Profit Company (NPC)</option>
+                <option value="Church Registration">Church Registration</option>
+                <option value="Company Re-instatement">Company Re-instatement</option>
+              </optgroup>
+              <optgroup label="Compliance">
+                <option value="CSD Registration">CSD Registration</option>
+                <option value="Tax Clearance">Tax Clearance Certificate</option>
+                <option value="COIDA Registration">COIDA Registration</option>
+                <option value="Beneficial Ownership">Beneficial Ownership Filing</option>
+              </optgroup>
+              <optgroup label="Branding & Strategy">
+                <option value="Logo & Letterhead">Logo &amp; Letterhead Design</option>
+                <option value="Business Plan">Business Plan Writing</option>
+                <option value="Coaching">Business Coaching</option>
+              </optgroup>
+              <option value="Other">Other / General Enquiry</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label for="businessName">Business Name (If applicable)</label>
+            <input id="businessName" name="businessName" type="text" placeholder="e.g. Majestic Traders">
+          </div>
+
+          <div class="field">
+            <label for="notes">Additional Details (optional)</label>
+            <textarea id="notes" name="notes" placeholder="Tell us a bit more about what you need..."></textarea>
+          </div>
+
+          <button type="submit" class="btn btn--primary">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.2-1.7-.9-2-1-.3-.1-.5-.1-.7.2s-.7 1-.9 1.2c-.2.2-.3.2-.6.1a8 8 0 0 1-2.4-1.5 9 9 0 0 1-1.6-2c-.2-.3 0-.5.1-.6l.5-.5c.1-.2.2-.3.3-.5v-.5l-1-2.2c-.2-.5-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.2.2 2.1 3.2 5.1 4.5 3 1.3 3 0 3.6-.5.6-.5.9-.9 1-1.5.1-.6.1-1 .1-1.1-.1-.2-.2-.2-.5-.4Z"/><path d="M12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.1l-.3-.2-3.1.8.8-3-.2-.3A8.2 8.2 0 1 1 12 20.2Z"/></svg>
+            Request Quote on WhatsApp
+          </button>
+        </form>
+
+        <aside class="cta-side reveal">
+          <h3>Contact Information</h3>
+          
+          <div class="contact-detail">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2Z"/></svg>
+            <div><strong>Phone / WhatsApp</strong><br><a href="tel:+27766712932" style="color:var(--teal-dark);font-weight:700;">076 671 2932</a></div>
+          </div>
+
+          <div class="contact-detail">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+            <div><strong>Address</strong><br>530 Steven Biko Ave,<br>Mmabatho Unit 2, Mahikeng</div>
+          </div>
+
+          <div class="contact-detail">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 7v5l3 2"/></svg>
+            <div><strong>Hours</strong><br>Opens at 3:30 PM</div>
+          </div>
+
+          <a class="btn btn--outline" style="width:100%; margin-top:10px; border-color:var(--black); color:var(--black);" href="https://wa.me/27766712932?text=Hi%20Majestic%20Start-Up%2C%20I%27d%20like%20to%20enquire%20about%20your%20services." target="_blank" rel="noopener">Message on WhatsApp</a>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ================= FOOTER ================= -->
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer__grid">
+      <div>
+        <div class="brand">
+          <img src="logo.png" alt="Majestic Start-Up Logo" class="brand__logo" style="height:40px;">
+          <span class="brand__text">
+            <span class="brand__name">Majestic Start-Up</span>
+            <span class="brand__sub">Business Consultancy</span>
+          </span>
+        </div>
+        <p>Expert business management consultancy in Mahikeng. We handle Company Registration, CSD, Tax Clearance, COIDA, and Business Plans.</p>
+      </div>
+
+      <div>
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#reviews">Reviews</a></li>
+          <li><a href="#contact">Get a Quote</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4>Get in touch</h4>
+        <ul>
+          <li><a href="tel:+27766712932">076 671 2932</a></li>
+          <li>530 Steven Biko Ave, Mmabatho Unit 2</li>
+          <li>Opens at 3:30 PM</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer__bottom">
+      <span>&copy; <span id="year">2026</span> Majestic Start-Up. All rights reserved.</span>
+      <span>Built by Malebo Mahlatsi.</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ================= FLOATING WHATSAPP ================= -->
+<a class="fab" href="https://wa.me/27766712932?text=Hi%20Majestic%20Start-Up%2C%20I%27d%20like%20to%20enquire%20about%20your%20services."
+   target="_blank" rel="noopener" aria-label="Chat with us on WhatsApp">
+  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.2-1.7-.9-2-1-.3-.1-.5-.1-.7.2s-.7 1-.9 1.2c-.2.2-.3.2-.6.1a8 8 0 0 1-2.4-1.5 9 9 0 0 1-1.6-2c-.2-.3 0-.5.1-.6l.5-.5c.1-.2.2-.3.3-.5v-.5l-1-2.2c-.2-.5-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.2.2 2.1 3.2 5.1 4.5 3 1.3 3 0 3.6-.5.6-.5.9-.9 1-1.5.1-.6.1-1 .1-1.1-.1-.2-.2-.2-.5-.4Z"/><path d="M12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.1l-.3-.2-3.1.8.8-3-.2-.3A8.2 8.2 0 1 1 12 20.2Z"/></svg>
+</a>
+
+<script>
+(function () {
+  'use strict';
+
+  /* ---------- Mobile menu ---------- */
+  var burger = document.getElementById('burger');
+  var menu = document.getElementById('mobileMenu');
+
+  burger.addEventListener('click', function () {
+    var open = menu.classList.toggle('is-open');
+    burger.setAttribute('aria-expanded', open ? 'true' : 'false');
+  });
+
+  menu.addEventListener('click', function (e) {
+    if (e.target.tagName === 'A') {
+      menu.classList.remove('is-open');
+      burger.setAttribute('aria-expanded', 'false');
+    }
+  });
+
+  /* ---------- Sticky header shadow ---------- */
+  var header = document.getElementById('header');
+  window.addEventListener('scroll', function () {
+    header.classList.toggle('is-stuck', window.scrollY > 8);
+  }, { passive: true });
+
+  /* ---------- Scroll reveal ---------- */
+  var revealEls = document.querySelectorAll('.reveal');
+  if ('IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          io.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+    revealEls.forEach(function (el) { io.observe(el); });
+  } else {
+    revealEls.forEach(function (el) { el.classList.add('is-visible'); });
+  }
+
+  /* ---------- Booking form → WhatsApp ---------- */
+  var form = document.getElementById('bookingForm');
+  var BUSINESS_NUMBER = '27766712932'; 
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+
+    var name = document.getElementById('name').value.trim();
+    var serviceType = document.getElementById('serviceType').value;
+    var businessName = document.getElementById('businessName').value.trim();
+    var notes = document.getElementById('notes').value.trim();
+
+    var lines = [
+      'Hi Majestic Start-Up, I would like to request a service.',
+      '',
+      'Name: ' + name,
+      'Service: ' + serviceType
+    ];
+
+    if (businessName) {
+      lines.push('Business Name: ' + businessName);
+    }
+    
+    if (notes) {
+      lines.push('Details: ' + notes);
+    }
+
+    var url = 'https://wa.me/' + BUSINESS_NUMBER + '?text=' + encodeURIComponent(lines.join('\n'));
+    window.open(url, '_blank', 'noopener');
+  });
+
+  /* ---------- Footer year ---------- */
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+})();
+</script>
+</body>
+</html>
